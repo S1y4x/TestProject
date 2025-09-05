@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemies == null) return;
 
-        int randomNumber = Random.Range(0, enemies.Count - 1);
+        int randomNumber = Random.Range(0, enemies.Count);
         Instantiate(enemies[randomNumber], SetLocation(), Quaternion.identity);
     }
 

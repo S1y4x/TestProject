@@ -10,7 +10,14 @@ public class EnemyLogic : MonoBehaviour
 
     private void Start()
     {
-        player = FindFirstObjectByType<PlayerCtrl>().gameObject;
+        try
+        {
+            player = FindFirstObjectByType<PlayerCtrl>().gameObject;
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex.Message);
+        }
     }
 
     private void FixedUpdate()
